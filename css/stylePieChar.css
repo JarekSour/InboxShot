@@ -1,0 +1,35 @@
+@charset "utf-8";
+.chart {
+	position: relative;
+	width: 180px;
+	height: 180px;
+	margin-bottom: 50px;
+	text-align: center;
+	/*font-weight: bold;*/
+}
+.chart canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.percent {
+	z-index: 2;
+	font-size: 34px;
+	line-height: 150px;
+	color: gray;
+}
+.percent:after {
+	content: '%';
+	margin-left: 0.1em;
+	font-size: .8em;
+}
+.pe{
+	color:#FFF;
+  	font-size: 15px;
+	}
+.aper{
+	color:#000;
+	margin-top: -62px;
+  	margin-bottom: 62px;
+	}
+

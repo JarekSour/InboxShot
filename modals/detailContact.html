@@ -1,0 +1,76 @@
+<div class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" ng-click="close()" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Editar contacto</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                 <form class="form-horizontal" role="form">
+                    <div class="form-group col-md-12">
+                        <img src="{{contact.gra}}" class="img-circle" style="height: 70px;display: block;margin: 0 auto;">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Nombre(s)</label>
+                        <input type="text" class="form-control input-sm" placeholder="Jarek" ng-model="contact.nom">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Apellido(s)</label>
+                        <input type="text" class="form-control input-sm" placeholder="Castro" ng-model="contact.ape">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Correo electrónico</label>
+                        <input type="text" class="form-control input-sm" placeholder="j.castro@mail.com" ng-model="contact.ema">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Sexo</label>
+                        <select class="form-control input-sm" ng-model="contact.sex">
+                            <option></option>
+                            <option value="m">Masculino</option>
+                            <option value="f">Femenino</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Fecha de nacimiento</label>
+                        <input type="text" class="form-control input-sm" placeholder="21-05-1989" ng-model="contact.fec">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Grupo</label>
+                        <input type="text" class="form-control input-sm" placeholder="Grupo A" ng-model="contact.gru">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Número de télefono</label>
+                        <input type="text" class="form-control input-sm" placeholder="2212345678" ng-model="contact.fon">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Número de celular</label>
+                        <input type="text" class="form-control input-sm" placeholder="56912345678" ng-model="contact.cel">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>País</label>
+                        <input type="text" class="form-control input-sm" placeholder="Chile" ng-model="contact.pai">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Ciudad</label>
+                        <input type="text" class="form-control input-sm" placeholder="Santiago" ng-model="contact.ciu">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Nombre de empresa</label>
+                        <input type="text" class="form-control input-sm" placeholder="InboxShot" ng-model="contact.emp">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Web empresa</label>
+                        <input type="text" class="form-control input-sm" placeholder="http://inboxshot.com/" ng-model="contact.web">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" ng-click="update()" class="btn btn-success btn-sm" data-dismiss="modal">Guardar cambios</button>
+            <button type="button" ng-click="close()" class="btn btn-danger btn-sm" data-dismiss="modal">Eliminar contacto</button>
+            <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">Cancelar</button>
+        </div>
+    </div>
+</div>
+</div>
