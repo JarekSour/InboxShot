@@ -411,5 +411,33 @@ class Contact{
 		return json_encode($json);
 	}
 
+	public function delAllRebotado($id){
+		require_once('elastic.class.php');
+		$elastic = new Elastic();
+		$key  = $elastic->getApiKey($id);
+		$json = $elastic->fileGetContentsCurl("https://api.elasticemail.com/v2/contact/delete?apikey=".$key["key"]."&rule=Status%20=%20Bounced");
+
+		$json = json_decode($json, true);
+		
+		if($json["success"]==true)
+			return json_encode(array("status"=>true, "msg"=>"Los contactos fueron eliminado exitosamente"));
+		else
+			return json_encode(array("status"=>false, "msg"=>"Upps! hubo un error, reintente"));
+	}
+
+	public function delAllDesuscrito($id){
+		require_once('elastic.class.php');
+		$elastic = new Elastic();
+		$key  = $elastic->getApiKey($id);
+		$json = $elastic->fileGetContentsCurl("https://api.elasticemail.com/v2/contact/delete?apikey=".$key["key"]."&rule=Status%20=%20Unsubscribed");
+
+		$json = json_decode($json, true);
+		
+		if($json["success"]==true)
+			return json_encode(array("status"=>true, "msg"=>"Los contactos fueron eliminado exitosamente"));
+		else
+			return json_encode(array("status"=>false, "msg"=>"Upps! hubo un error, reintente"));
+	}
+
 }
 ?>

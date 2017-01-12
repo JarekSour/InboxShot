@@ -68,4 +68,16 @@ function verDesuscritos($scope, $compile, DTOptionsBuilder, DTColumnBuilder, DTD
 	}
 }
 
-app.controller('verdesuscrito',  function($scope, $http, ModalService){ });
+app.controller('verdesuscrito',  function($scope, $http, ModalService, $state){
+
+	$scope.deleteAllDesuscrito = function(){
+		$http.get("v1/list/desuscrito/deleteall")
+		.then(function(response) {
+			bootbox.alert(response.data.msg);
+
+			// if(response.data.status == true)
+			// 	verDesuscritos.reload();
+		});
+	}
+
+});

@@ -144,6 +144,24 @@ $f3->route('GET /list/rebotado',
 	}
 );
 
+$f3->route('GET /list/desuscrito/deleteall',
+	function($f3) {
+		require_once("model/contact.class.php");
+		$contact = new Contact();
+
+		echo $contact->delAllDesuscrito($_SESSION["ide"]);
+	}
+);
+
+$f3->route('GET /list/rebotado/deleteall',
+	function($f3) {
+		require_once("model/contact.class.php");
+		$contact = new Contact();
+
+		echo $contact->delAllRebotado($_SESSION["ide"]);
+	}
+);
+
 
 
 

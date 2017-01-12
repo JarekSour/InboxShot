@@ -65,8 +65,19 @@ function verRebotados($scope, $compile, DTOptionsBuilder, DTColumnBuilder, DTDef
 				}
 			}
 		});
-
 	}
 }
 
-app.controller('verrebotado',  function($scope, $http, ModalService){ });
+app.controller('verrebotado',  function($scope, $http, ModalService){
+
+	$scope.deleteAllRebotado = function(){
+		$http.get("v1/list/rebotado/deleteall")
+		.then(function(response) {
+			bootbox.alert(response.data.msg);
+
+			// if(response.data.status == true)
+			// 	verRebotados.reload();
+		});
+	}
+
+});

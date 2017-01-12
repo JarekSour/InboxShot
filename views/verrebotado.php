@@ -5,7 +5,7 @@
 		</div>
 		<div class="col-md-6 inicio2">
 			<p></p>
-			<a href="excel.php?opt=contactactive" target="_blank" class="btn btn-danger btn-sm" >Eliminar todos los contactos rebotados</a>
+			<a ng-click="deleteAllRebotado()" target="_blank" class="btn btn-danger btn-sm" >Eliminar todos los contactos rebotados</a>
 		</div>
 	</div>
 
